@@ -1,14 +1,16 @@
 package com.javastudio.tutorial;
 
 import com.javastudio.tutorial.model.Product;
+import com.javastudio.tutorial.repository.ProductRepository;
 import com.javastudio.tutorial.service.ProductService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Application {
     private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
-    private static final ProductService SERVICE = new ProductService();
 
+    private static final ProductRepository REPOSITORY = new ProductRepository();
+    private static final ProductService SERVICE = new ProductService(REPOSITORY);
 
     public static void main(String[] args) {
         LOGGER.info("Application started!");

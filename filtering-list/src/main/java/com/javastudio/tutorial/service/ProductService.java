@@ -1,26 +1,24 @@
 package com.javastudio.tutorial.service;
 
 import com.javastudio.tutorial.model.Product;
+import com.javastudio.tutorial.repository.ProductRepository;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class ProductService {
-    private static final List<Product> PRODUCTS = Arrays.asList(
-            new Product.Builder("Nail").build(),
-            new Product.Builder("Hammer").price(1).build(),
-            new Product.Builder("Basket").build(),
-            new Product.Builder("Wooden chair").build(),
-            new Product.Builder("Wooden drawer").build()
-    );
+    private final ProductRepository REPOSITORY;
+
+    public ProductService(ProductRepository REPOSITORY) {
+        this.REPOSITORY = REPOSITORY;
+    }
 
     public List<Product> findAll() {
-        return PRODUCTS;
+        return REPOSITORY.findAll();
     }
 
     public List<Product> findByName(String name) {
-        return PRODUCTS
+        return REPOSITORY.findAll()
                 .stream().filter(
                         p -> p.getName().contains(name)
                 ).collect(Collectors.toList());
