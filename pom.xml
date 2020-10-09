@@ -8,7 +8,8 @@
     <artifactId>lambda-expressions</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
-        <module>filtering-list</module>
+        <module>filter-with-predicate</module>
+        <module>sort-with-comparator</module>
     </modules>
     <packaging>pom</packaging>
 
