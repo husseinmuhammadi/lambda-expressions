@@ -3,27 +3,28 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>com.javastudio.tutorial.lambda</groupId>
         <artifactId>lambda-expressions</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-
-    <artifactId>sort-with-comparator</artifactId>
+    <artifactId>lambda-collections</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
 
     <build>
+        <finalName>lambda-collections</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
                 <configuration>
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.javastudio.tutorial.Application</mainClass>
+                            <mainClass>com.javastudio.tutorial.lambda.Application</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
