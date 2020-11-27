@@ -10,7 +10,8 @@
     <modules>
         <module>filter-with-predicate</module>
         <module>sort-with-comparator</module>
-        <module>collections</module>
+        <module>lambda-collections</module>
+        <module>lambda-aggregation</module>
     </modules>
     <packaging>pom</packaging>
 

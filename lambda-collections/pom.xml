@@ -9,8 +9,10 @@
         <artifactId>lambda-expressions</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
+
     <artifactId>lambda-collections</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <build>
         <finalName>lambda-collections</finalName>
